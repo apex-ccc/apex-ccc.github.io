@@ -1,0 +1,268 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<link href="https://fonts.googleapis.com/css2?family=Poppins&display=swap" rel="stylesheet">
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Concept Clear Classes</title>
+
+<style>
+body {
+    margin: 0;
+    font-family: 'Poppins', sans-serif;
+}
+
+/* HEADER */
+header {
+    background: linear-gradient(45deg, #0a3d62, #1e90ff);
+    color: white;
+    text-align: center;
+    padding: 20px;
+}
+
+header h1 {
+    margin: 5px;
+}
+
+/* HERO IMAGE */
+.hero img {
+    width: 100%;
+    height: auto;
+}
+
+/* SECTIONS */
+.container {
+    padding: 20px;
+}
+
+.section {
+    background: #f9f9f9;
+    margin-bottom: 20px;
+    padding: 20px;
+    border-radius: 10px;
+}
+
+h2 {
+    color: #0a3d62;
+}
+
+ul {
+    line-height: 1.8;
+}
+
+/* FORM */
+form {
+    display: flex;
+    flex-direction: column;
+}
+
+input, select, textarea {
+    margin: 8px 0;
+    padding: 10px;
+    font-size: 16px;
+}
+
+button {
+    background: #0a3d62;
+    color: white;
+    padding: 10px;
+    border: none;
+    cursor: pointer;
+}
+
+/* CONTACT */
+.contact {
+    background: #0a3d62;
+    color: white;
+    text-align: center;
+    padding: 15px;
+}
+
+/* MAP */
+iframe {
+    width: 100%;
+    height: 300px;
+    border: none;
+}
+
+/* WHATSAPP BUTTON */
+.whatsapp {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    background: #25D366;
+    color: white;
+    padding: 15px;
+    border-radius: 50%;
+    font-size: 20px;
+    text-decoration: none;
+}
+
+/* FOOTER */
+footer {
+    text-align: center;
+    background: #222;
+    color: white;
+    padding: 10px;
+}
+
+/* MOBILE */
+@media(max-width:600px){
+    header h1 {
+        font-size: 20px;
+    }
+}
+</style>
+</head>
+
+<body>
+
+<header>
+    <h1>APEX</h1>
+    <h1>CONCEPT CLEAR CLASSES</h1>
+    <p>Learn Smart • Build Future</p>
+</header>
+
+<!-- HERO IMAGE -->
+<div class="hero">
+    <!-- Replace with your image file name -->
+    <img src="banner.jpg" alt="Concept Clear Classes">
+</div>
+
+<div class="container">
+
+    <!-- ACADEMIC -->
+    <div class="section">
+        <h2>📘 Academic Classes</h2>
+        <ul>
+            <li><b>Nursery to 12th (All Subjects)</b></li>
+            <li>Special Attention for NEET / Engineering / Polytechnic</li>
+            <li>Smart Classes with animations</li>
+            <li>Regular tests & fun learning</li>
+        </ul>
+    </div>
+
+    <!-- TECHNICAL -->
+    <div class="section">
+        <h2>💻 Technical Classes</h2>
+        <ul>
+            <li>DCA / ADCA / BCA / MCA</li>
+            <li>Python / Java / C++</li>
+            <li>HTML / CSS / JavaScript</li>
+            <li>RDBMS (SQL Server, Oracle, MySQL)</li>
+        </ul>
+    </div>
+
+    <!-- TEACHERS -->
+    <div class="section">
+        <h2>👨‍🏫 Experienced Instructors</h2>
+        <ul>
+            <li>Md Muzaffar Hussain (B.Tech CSE)</li>
+            <li>Hena Naj (MSc Math, B.Ed, CTET)</li>
+            <li>Zeba Yasmin (BSc Bio, D.El.Ed)</li>
+            <li>Nilufar Parween (BA Urdu)</li>
+            <li>Irshad Ansari (MSc)</li>
+        </ul>
+    </div>
+
+    <!-- ADMISSION FORM -->
+    <div class="section">
+        <h2>📝 Admission Form</h2>
+
+        <form action="YOUR_GOOGLE_FORM_LINK" method="POST" target="_blank">
+    <input type="text" name="entry.123456" placeholder="Student Name" required>
+    <input type="text" name="entry.234567" placeholder="Father Name" required>
+    <input type="tel" name="entry.345678" placeholder="Mobile Number" required>
+
+    <select name="entry.456789">
+        <option>Academic classes</option>
+        <option>Technical courses</option>
+		<option>Exam Preparation</option>
+    </select>
+	
+	<select name="entry.456789">
+        <option>Nursary to std 2</option>
+        <option>std 3 to std 5</option>
+		<option>std 6 to std 8</option>
+		<option>std 9 to std 10</option>
+		<option>std 11 to std 12</option>
+    </select>
+	
+	<select name="entry.456789">
+        <option>DCA</option>
+        <option>ADCA</option>
+		<option>BCA</option>
+		<option>MCA</option>
+		<option>Computer Hardware & Networking</option>
+		<option>CCNA</option>
+        <option>Instrumentation</option>
+		<option>Full stack web development</option>
+		<option>RDBMS</option>
+		<option>Programming Language</option>
+    </select>
+	
+	<select name="entry.456789">
+        <option>SSC</option>
+        <option>JSSC</option>
+		<option>Railway</option>
+		<option>Banking</option>
+		<option>NEET</option>
+		<option>JEE</option>
+        <option>Polytechnic</option>
+    </select>
+
+    <textarea name="entry.567890" placeholder="Address"></textarea>
+	
+	<input type="text" name="entry.123456" placeholder="School Name" required>
+	
+	<select name="entry.456789">
+        <option>CBSE</option>
+        <option>JAC</option>
+		<option>ICSE</option>
+    </select>
+	
+	<select name="entry.456789">
+        <option>English</option>
+        <option>Hindi</option>
+    </select>
+	
+	<input type="text" name="entry.123456" placeholder="Father's Occupation" required>
+	<input type="text" name="entry.123456" placeholder="Student's image" required>
+
+    <button type="submit">Submit</button>
+</form>
+    </div>
+	<div>
+		<a href="upi://pay?pa=yourupi@upi&pn=ConceptClearClasses&cu=INR">
+    <button>Pay Fees</button>
+</a>
+	
+	</div>
+
+    <!-- LOCATION -->
+    <div class="section">
+        <h2>📍 Our Location</h2>
+        <p>SF House, Behind St. Michael School,<br>
+        ISM Chowk, Pundag, Ranchi</p>
+
+        <!-- GOOGLE MAP -->
+        <iframe src="https://maps.google.com/maps?q=ISM%20Chowk%20Pundag%20Ranchi&t=&z=13&ie=UTF8&iwloc=&output=embed"></iframe>
+    </div>
+
+</div>
+
+<!-- CONTACT -->
+<div class="contact">
+    📞 88640 62884 | 99391 77337 | 83407 07090
+</div>
+
+<!-- WHATSAPP BUTTON -->
+<a class="whatsapp" href="https://wa.me/9939177337?text=I%20want%20to%20take%20admission" target="_blank">💬</a>
+
+
+<footer>
+    © 2026 Apex Concept Clear Classes | Designed by Md Muzaffar Hussain (SDE)
+</footer>
+
+</body>
+</html>
