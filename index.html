@@ -23,7 +23,11 @@ nav {
     /*position: sticky;*/
     top: 0;
 	
+	position: relative;
+    overflow: hidden;
+  /*  background: linear-gradient(135deg, #0a2540, #123a5c); */
 	
+
 }
 
 nav a {
@@ -35,30 +39,53 @@ nav a {
 
 /* Floating Icons Container */
 .floating-icons {
-    position: absolute;
+position: absolute;
     width: 100%;
     height: 100%;
     pointer-events: none;
+    filter: blur(0.3px);
 }
 
 /* Individual Icons */
 .icon {
     position: absolute;
-    font-size: 22px;
-    color: rgba(255, 255, 255, 0.25); /* Transparent white */
-    animation: floatMove linear infinite;
+    font-size: 90px;
+    opacity: 0.25;
+    animation: floatPremium linear infinite;
+    transition: transform 0.5s ease;
+}
+/* Subject Colors */
+.math {
+    color: #00e0ff; /* blue glow */
+    text-shadow: 0 0 10px rgba(0, 224, 255, 0.6);
 }
 
-/* Floating Animation */
-@keyframes floatMove {
+.chem {
+    color: #ffd700; /* gold */
+    text-shadow: 0 0 10px rgba(255, 215, 0, 0.6);
+}
+
+.bio {
+    color: #00ff9f; /* green */
+    text-shadow: 0 0 10px rgba(0, 255, 159, 0.6);
+}
+
+/* Smooth Floating Animation */
+@keyframes floatPremium {
     0% {
-        transform: translate(0, 0);
+        transform: translate(0px, 0px) scale(1);
+    }
+    25% {
+        transform: translate(30px, -40px) scale(1.1);
     }
     50% {
-        transform: translate(40px, -60px);
+        transform: translate(-20px, -80px) scale(0.95);
+    }
+    75% {
+        transform: translate(40px, -20px) scale(1.05);
     }
     100% {
-        transform: translate(-30px, 30px);
+        transform: translate(0px, 0px) scale(1);
     }
 }
 
@@ -235,15 +262,17 @@ margin: 0 10px;
     </div>
 	
 	<div class="floating-icons">
-        <span class="icon">∑</span>   <!-- Math -->
-        <span class="icon">√</span>
-        <span class="icon">π</span>
+        <!-- Math -->
+        <div class="icon math">∑</div>
+        <div class="icon math">π</div>
 
-        <span class="icon">⚗</span>   <!-- Chemistry -->
-        <span class="icon">🧪</span>
+        <!-- Chemistry -->
+        <div class="icon chem">⚗</div>
+        <div class="icon chem">🧪</div>
 
-        <span class="icon">🧬</span>   <!-- Biology -->
-        <span class="icon">🌿</span>
+        <!-- Biology -->
+        <div class="icon bio">🧬</div>
+        <div class="icon bio">🌿</div>
     </div>
 </nav>
 
@@ -465,6 +494,27 @@ margin: 0 10px;
 	
 	</div>
 </footer>
+<!-- floating Animation  -->
+<script>
+const icons = document.querySelectorAll('.icon');
+
+icons.forEach(icon => {
+    // Random start position
+    icon.style.left = Math.random() * 100 + "%";
+    icon.style.top = Math.random() * 100 + "%";
+
+    // Random animation duration (smooth)
+    let duration = 12 + Math.random() * 10;
+    icon.style.animationDuration = duration + "s";
+
+    // Random delay
+    icon.style.animationDelay = Math.random() * 5 + "s";
+
+    // Random size variation (depth feel)
+    let scale = 0.8 + Math.random() * 0.6;
+    icon.style.transform = `scale(${scale})`;
+});
+</script>
 
 <script>
 function updateSubcategory() {
